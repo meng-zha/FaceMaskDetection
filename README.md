@@ -11,7 +11,16 @@ Edit the val/test_00000306.xml because the class name in it is "fask_nask". Corr
 * voc2coco.py: convert the voc style data to coco style data.
 * dataset.py: dataset of AIZOO if you want to use your model.
 * mmdetection/: the codes forked from [open-mmlab](https://github.com/open-mmlab/mmdetection), train and test of retinanet and faster rcnn.
+    * tools/: the scripts of train and test 
+    * configs/: the configs of models
+    * demo/image_demo.py: inference on the demo images
+    * mmdet/: core code, dataset and models
 * PyTorch-YOLOv3/: the codes forked from [eriklindernoren](https://github.com/eriklindernoren/PyTorch-YOLOv3), train and test of yolov3.
+    * train.py: train the yolov3 model
+    * test.py: test the model
+    * detect.py: inference on the demo images
+    * utils/: dataset and some other fucntions
+    * models.py: darknet models
 
 ## Faster RCNN and RetinaNet
 ##### Clone and install requirements
@@ -51,8 +60,7 @@ $ ./tools/test.sh configs/retinanet/retinanet_x101_64x4d_fpn_1x_coco.py $CHECKPO
 ##### Inference
 To get the result of the test images, please run:
 ```
-$ python demo/image_demo.py $IMG_PATH config
-s/scratch/faster_rcnn_r50_fpn_gn-all_scratch_6x_coco.py $CHECKPOINTS_PATH
+$ python demo/image_demo.py $IMG_PATH configs/scratch/faster_rcnn_r50_fpn_gn-all_scratch_6x_coco.py $CHECKPOINTS_PATH
 ```
 
 #### Faster RCNN
@@ -97,7 +105,7 @@ The best model of faster rcnn is in [faster_rcnn_batch_1_best](https://cloud.tsi
 
 The best model of retinanet is in [retinanet_baseline](https://cloud.tsinghua.edu.cn/d/cadc5ae7179e4f17b201/).
 
-The best model of yolov3 is in [yolov3_baseline](https://cloud.tsinghua.edu.cn/d/b7825aede9c948d386a2/).
+The best model of yolov3 is in [yolov3_best](https://cloud.tsinghua.edu.cn/d/a0b17652c556473a9ad7).
 
 ## Contact
 Please don't contact me if you find some bugs. If not, my mailbox will be overflowing.
